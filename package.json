@@ -1,0 +1,81 @@
+{
+  "name": "@formation.tech/components",
+  "version": "1.0.0",
+  "description": "Web components formation.tech (Lit + wrappers React)",
+  "type": "module",
+  "license": "MIT",
+  "author": "formation.tech",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/formation-tech/components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/formation-tech/components/issues"
+  },
+  "homepage": "https://github.com/formation-tech/components#readme",
+  "keywords": [
+    "web-components",
+    "lit",
+    "react",
+    "formation.tech",
+    "logo",
+    "custom-elements"
+  ],
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./ft-owl-logo": {
+      "types": "./dist/ft-owl-logo.d.ts",
+      "import": "./dist/ft-owl-logo.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.js"
+    },
+    "./react/ft-owl-logo": {
+      "types": "./dist/react/ft-owl-logo.d.ts",
+      "import": "./dist/react/ft-owl-logo.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "preview": "vite preview --root demo"
+  },
+  "peerDependencies": {
+    "@lit/react": "^1.0.0",
+    "lit": "^3.0.0",
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "@lit/react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@lit/react": "^1.0.8",
+    "@types/node": "^25.9.3",
+    "@types/react": "^19.2.7",
+    "lit": "^3.3.2",
+    "react": "^19.2.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.12"
+  }
+}

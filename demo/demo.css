@@ -1,0 +1,26 @@
+:root {
+  color-scheme: light;
+  background-color: #faf8f3;
+  color: #15211b;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100svh;
+  font-family: system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.demo {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  text-align: center;
+}
